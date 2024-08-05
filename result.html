@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container {
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #000000;
+}
+.sub{
+    margin: 10px;
+}
+input[type="text"]{
+    width: 50%;
+    height: 10px;
+    float:right;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h4>Marksheet for Information Technology</h4>    
+    <div class="sub">
+        <label for="s1">1. C Language:</label>
+        <input type="text" id="s1" value="34"><br>
+    </div>
+
+    <div class="sub">
+        <label for="s2">2. C++ Language:</label>
+        <input type="text" id="s2" value="44"><br>
+    </div>
+
+    <div class="sub">
+        <label for="s3">3. Database:</label>
+        <input type="text" id="s3" value="22"><br>
+    </div>
+
+    <div class="sub">
+        <label for="s4">4. HTML:</label>
+        <input type="text" id="s4" value="33"><br>
+    </div>
+
+    <div class="sub">
+        <label for="s5">5. CSS:</label>
+        <input type="text" id="s5" value="45"><br>
+    </div>
+
+    <div class="sub">
+        <label for="s6">6. php:</label>
+        <input type="text" id="s6" value="44"><br>
+    </div>
+
+    <div class="sub">
+        <label for="s7">7. Core java:</label>
+        <input type="text" id="s7" value="50"><br>
+    </div>
+    
+  <button onclick="calculate()">Result</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function calculate() {
+  var s1 = parseInt(document.getElementById("s1").value);
+  var s2 = parseInt(document.getElementById("s2").value);
+  var s3 = parseInt(document.getElementById("s3").value);
+  var s4 = parseInt(document.getElementById("s4").value);
+  var s5 = parseInt(document.getElementById("s5").value);
+  var s6 = parseInt(document.getElementById("s6").value);
+  var s7 = parseInt(document.getElementById("s7").value);
+
+  var total = s1 + s2 + s3 + s4 + s5 + s6 + s7;
+  var percentage = (total / 350) * 100;
+
+  document.getElementById("result").innerHTML = "Total is: " + total + "/350<br>Percentage is: " + percentage + "%";
+}
+</script>
+
+</body>
+</html>
